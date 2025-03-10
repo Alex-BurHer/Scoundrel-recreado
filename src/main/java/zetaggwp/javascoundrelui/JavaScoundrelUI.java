@@ -96,20 +96,11 @@ public class JavaScoundrelUI {
     }
 
     public static void saltarSala() {
-        System.out.println(sala);
-        System.out.println(tempSala);
         for (int i = sala.size()-1; i >= 0; i--) {
-            System.out.println(sala);
-            System.out.println(tempSala);
-            System.out.println("AAA");
             baraja.addLast(sala.get(i));
             sala.remove(i);
-            System.out.println(sala);
-            System.out.println(tempSala);
         }
         generarSala();
-        System.out.println(sala);
-        System.out.println(tempSala);
         jugador.setSaltadoSalaPrevia(true);
     }
 
