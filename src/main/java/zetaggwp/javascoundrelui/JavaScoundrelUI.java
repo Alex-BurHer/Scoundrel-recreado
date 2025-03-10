@@ -56,9 +56,7 @@ public class JavaScoundrelUI {
         if (tempSala.size() == 1) {
             sala.clear();
             sala.addAll(tempSala);
-            boolean saltado = jugador.isSaltadoSalaPrevia();
             generarSala();
-            jugador.setSaltadoSalaPrevia(saltado);
             controlGUIPartida();
         }
     }
