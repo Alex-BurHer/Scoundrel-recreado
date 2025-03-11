@@ -98,6 +98,16 @@ public class PantallaSala extends JPanel {
             catch(IOException ex) {
                 System.exit(0);
             }
+            catch(IndexOutOfBoundsException ex) {
+                try {
+                    botones.get(i).setIcon(new ImageIcon(ImageIO.read(getFileFromResourceAsStream("cards/blank.png"))));
+                    botones.get(i).setEnabled(false);
+                }
+                catch (IOException exception) {
+                    System.exit(0);
+                }
+                
+            }
         }
     }
     
@@ -180,6 +190,7 @@ public class PantallaSala extends JPanel {
         JavaScoundrelUI.tempSala.remove(JavaScoundrelUI.seleccionada);
         JavaScoundrelUI.checkSala();
         JavaScoundrelUI.menu.getPanelDatos().updateLabels();
+        JavaScoundrelUI.checkResultado();
     }
 
 }

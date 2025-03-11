@@ -26,7 +26,7 @@ public class PantallaLucha extends JPanel {
                 MainMenu_V1 main = new MainMenu_V1();
                 JavaScoundrelUI.menu.getPanelGuardado().setVisible(true);
                 JavaScoundrelUI.menu.getPanelDatos().updateLabels();
-                JavaScoundrelUI.checkHP();
+                JavaScoundrelUI.checkResultado();
                 main.switchPanel(mainPanel, "Sala");
             }
         });
@@ -37,7 +37,7 @@ public class PantallaLucha extends JPanel {
                 MainMenu_V1 main = new MainMenu_V1();
                 JavaScoundrelUI.menu.getPanelGuardado().setVisible(true);
                 JavaScoundrelUI.menu.getPanelDatos().updateLabels();
-                JavaScoundrelUI.checkHP();
+                JavaScoundrelUI.checkResultado();
                 main.switchPanel(mainPanel, "Sala");
 
             }

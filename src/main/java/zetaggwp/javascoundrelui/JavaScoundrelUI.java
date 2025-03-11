@@ -53,7 +53,7 @@ public class JavaScoundrelUI {
     }
 
     public static void checkSala() {
-        if (tempSala.size() == 1) {
+        if (tempSala.size() <= 1) {
             sala.clear();
             sala.addAll(tempSala);
             generarSala();
@@ -61,11 +61,11 @@ public class JavaScoundrelUI {
         }
     }
 
-    public static void checkHP() {
+    public static void checkResultado() {
         if (jugador.getHP() < 1) {
             menu.getPanelDatos().resultadoPartida(JavaScoundrelUI.DERROTA);
             menu.getPantallaSala().desabilitarBotones();
-        } else if (baraja.isEmpty() && jugador.getHP() > 1) {
+        } else if (baraja.isEmpty() && sala.isEmpty() && jugador.getHP() > 1) {
             menu.getPanelDatos().resultadoPartida(JavaScoundrelUI.VICTORIA);
             menu.getPantallaSala().desabilitarBotones();
         }
